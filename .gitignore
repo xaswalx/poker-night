@@ -1,0 +1,11 @@
+node_modules/
+dist/
+coverage/
+.cache/
+.env
+.env.*
+*.log
+*.tsbuildinfo
+*.pem
+*.key
+.DS_Store
