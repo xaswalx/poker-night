@@ -14,6 +14,7 @@ Open the localhost URL printed by Vite. Use Node.js 24 LTS or newer supported LT
 
 ```powershell
 npm test
+npm run typecheck
 npm run build
 npm run preview
 ```
@@ -23,3 +24,11 @@ React + TypeScript + Vite, with Tailwind CSS. `src/components` holds reusable UI
 Avatar uploads are validated raster images, previewed in memory, never sent or persisted. Demo chip values are static. Betting buttons are disabled intentionally.
 
 Work on feature branches, run checks, use conventional commits, push branches and open PRs against `main`. Never merge without owner approval. Never commit secrets, environment files, dependencies or build output.
+
+## Phase 1 verification (2026-11-13)
+
+The existing home, nickname and avatar selection flows and custom blue/pink neon table remain frontend-only. Five fixed community-card slots now include FLOP, TURN and RIVER labels. No live poker gameplay is implemented.
+
+All three mock-data validation tests pass. Dependency installation is blocked by denied access to registry.npmjs.org; TypeScript and production build cannot complete without the dependencies. Desktop/mobile browser verification remains unverified because the Vite app cannot start without those dependencies.
+
+The local feature branch is `feat/poker-night-ui`, based on the existing local `main`. Fetching GitHub fails to connect, and GitHub CLI reports invalid authentication. Remote `main` existence and history are therefore unknown. No merge, remote base creation, push or pull request is claimed; reconcile the actual remote history before publishing.

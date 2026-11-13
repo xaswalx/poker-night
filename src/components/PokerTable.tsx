@@ -14,7 +14,7 @@ export default function PokerTable({ players }: { players: Player[] }) {
         <rect x="33" y="33" width="934" height="434" rx="217" fill="none" stroke="#ff157c" strokeWidth="4" className="pink-rim" />
       </svg>
       <div className="board"><p className="pot-label">TOTAL POT <strong>0 <span>chips</span></strong></p>
-        <div className="community-cards" aria-label="Five empty community card slots">{Array.from({ length: 5 }, (_, i) => <div className="card-slot" key={i}><span aria-hidden="true">♠</span><span className="sr-only">Community card {i + 1}, empty</span></div>)}</div>
+        <div className="community-cards" aria-label="Five empty community card slots">{Array.from({ length: 5 }, (_, i) => <div className="community-slot" key={i}><div className="card-slot"><span aria-hidden="true">♠</span><span className="sr-only">Community card {i + 1}, empty</span></div><span className="street-label">{i < 3 ? 'FLOP' : i === 3 ? 'TURN' : 'RIVER'}</span></div>)}</div>
         <span className="board-caption">THE NIGHT IS YOURS</span>
       </div>
     </div>
